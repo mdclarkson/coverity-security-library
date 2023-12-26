@@ -2,6 +2,7 @@ package com.coverity.testsuite;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -9,17 +10,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 
     // By default we go to the EL tests.
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @GetMapping(value = "/")
     public String index(Model model) {
         return "test-el";
     }
 
-    @RequestMapping(value = "/el", method = RequestMethod.GET)
+    @GetMapping(value = "/el")
     public String testEL(Model model) {
         return "test-el";
     }
     
-    @RequestMapping(value = "/scriptlet", method = RequestMethod.GET)
+    @GetMapping(value = "/scriptlet")
     public String testJSP(Model model) {
         return "test-jsp";
     }

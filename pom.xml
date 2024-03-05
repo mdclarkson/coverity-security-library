@@ -55,6 +55,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <versions.encoder>1.2.3</versions.encoder>
     </properties>
 
     <modules>
@@ -144,4 +145,13 @@
             </build>
         </profile>
     </profiles>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.owasp.encoder</groupId>
+                <artifactId>encoder</artifactId>
+                <version>${versions.encoder}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

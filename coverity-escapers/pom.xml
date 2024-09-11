@@ -64,6 +64,10 @@
             <version>0.7.7.201606060606</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.owasp.encoder</groupId>
+            <artifactId>encoder</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

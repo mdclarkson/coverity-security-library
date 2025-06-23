@@ -118,9 +118,9 @@
                 As we put the escapers in the classpath, we can also use the Java escapers
                 within scriplets. First we get few parameters and add them to the page context.
             --%>
-            <c:set var="param1" value="<%= request.getParameter("param1") %>" />
-            <c:set var="param2" value="<%= request.getParameter("param2") %>" />
-            <c:set var="cssImageURL" value="<%= request.getParameter("cssImageURL") %>" />
+            <c:set var="param1" value="<%=org.owasp.encoder.Encode.forHtml( request.getParameter("param1") )%>" />
+            <c:set var="param2" value="<%=org.owasp.encoder.Encode.forHtml( request.getParameter("param2") )%>" />
+            <c:set var="cssImageURL" value="<%=org.owasp.encoder.Encode.forHtml( request.getParameter("cssImageURL") )%>" />
 
 
             <div id="<%= Escape.html(pageContext.getAttribute("param1")) %>">
